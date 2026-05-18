@@ -1,0 +1,33 @@
+/* =========================
+   MINDPULSE FONT FIX (STREAMLIT SAFE)
+   ========================= */
+
+/* MAIN TITLE (st.title) */
+[data-testid="stMarkdownContainer"] h1 {
+    font-family: "Georgia", serif;
+    font-size: 42px;
+}
+
+/* SUBHEADINGS (st.subheader / h2) */
+[data-testid="stMarkdownContainer"] h2 {
+    font-family: "Georgia", serif;
+    font-size: 30px;
+}
+
+/* MINOR HEADINGS */
+[data-testid="stMarkdownContainer"] h3 {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+}
+
+/* NORMAL TEXT */
+[data-testid="stMarkdownContainer"] p {
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+/* SMALL DETAILS */
+.small-text {
+    font-family: "Gabriola", cursive;
+    font-size: 18px;
+}
