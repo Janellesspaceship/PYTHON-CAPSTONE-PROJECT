@@ -29,7 +29,12 @@ load_css()
 # BACKGROUND IMAGE (HOME ONLY)
 #-----------------------------
 def set_bg(image_file):
-    with open(image_file, "rb") as f:
+    bg_path = Path(__file__).parent / image_file
+
+    if bg_path.exists():
+
+        with open(image_file, "rb") as f:
+            data = f.read()
         encoded = base64.b64encode(f.read()).decode()
 
     st.markdown(
@@ -46,6 +51,9 @@ def set_bg(image_file):
         unsafe_allow_html=True
     )
 
+    else:
+    
+        st.warning(f"Background image not found: {bg_path}")
 
 #-------------------------------
 # RESET BACKGROUND (OTHER PAGES)
